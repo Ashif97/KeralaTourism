@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="indexstyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    
+      
+      <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Home</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#About">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Districts
+                </a>
+                <ul class="dropdown-menu">
+
+                  <li><a class="dropdown-item" href="./Trvndrm.html">Thiruvananthapuram</a></li>
+                  <li><a class="dropdown-item" href="../kllm.html">Kollam</a></li>
+                  <li><a class="dropdown-item" href="./pthmthtta.html">Pathanamthitta</a></li>
+                  <li><a class="dropdown-item" href="./alppy.html">Alappuzha</a></li>
+                  <li><a class="dropdown-item" href="./kttym.html">Kottayam</a></li>
+                  <li><a class="dropdown-item" href="./idkki.html">Idukki</a></li>
+                  <li><a class="dropdown-item" href="./ekm.html">Eranakulam</a></li>
+                  <li><a class="dropdown-item" href="./trssr.html">Thrissur</a></li>
+                  <li><a class="dropdown-item" href="./pkd.html">Palakkad</a></li>
+                  <li><a class="dropdown-item" href="./mlprm.html">Malappuram</a></li>
+                  <li><a class="dropdown-item" href="./kzhkd.html">Kozhikode</a></li>
+                  <li><a class="dropdown-item" href="./waynd.html">Wayanad</a></li>
+                  <li><a class="dropdown-item " href="./kannur.html">Kannur</a></li>
+                  <li ><a class="dropdown-item" href="./ksrgd.html">Kasaragod</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="signupModalLabel">Sign up</h5>
+    
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- Login form goes here -->
+              <form id="signupform" onsubmit=" return handleSubmit()">
+                <!-- Form fields go here -->
+                <div class="alert alert-danger" id="signupAlert" role="alert" style="display: none;">
+                  A simple danger alert—check it out!
+                </div>
+          
+                <div class="mb-3">
+                  <label for="signupUsername" class="form-label">Username</label>
+                  <input type="text" class="form-control" id="signupUsername" placeholder="Enter your username">
+                </div>
+                <div class="mb-3">
+                  <label for="signupEmail" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="signupEmail" placeholder="Enter your email" >
+                </div>
+                <div class="mb-3">
+                  <label for="signupPassword" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="signupPassword" placeholder="Enter your password">
+                </div>
+                <button type="submit"   class="btn btn-success">Sign up</button>
+    
+                <div class="mt-2 signuplogin">
+                  <p>Already have an account? <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal"
+                      data-bs-target="#loginModal">Login</a></p>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Login Modal -->
+    
+      <!-- Login Modal -->
+      <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="loginModalLabel">Login</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- Login form goes here -->
+              <form id="loginForm" onsubmit=" return handleLoginSubmit()">
+                <!-- Form fields go here -->
+                <div class="alert alert-danger" id="loginAlert" role="alert" style="display: none;">
+                  A simple danger alert—check it out!
+                </div>
+                <div class="mb-3">
+                  <label for="loginUsername" class="form-label">Username</label>
+                  <input type="text" class="form-control" id="loginUsername" placeholder="Enter your username" >
+                </div>
+                <div class="mb-3">
+                  <label for="loginPassword" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password">
+                </div>
+    
+                <button type="submit" class="btn btn-success">Login</button>
+    
+                <div class="mt-2 signuplogin">
+                  <p>Don't have an account? <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal"
+                      data-bs-target="#signupModal">Sign up</a></p>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+            
+      <div class="image-container">
+        <img src="./PICs/banner_kerala.jpg" class="img-fluid" alt="Your Image Description">
+      </div>
+       
+       <section id="About" class="T lead">
+        <h1>ABOUT</h1>
+        
+        <p><strong>Welcome to the mesmerizing realm of Kerala, a captivating destination renowned for its natural wonders and cultural richness. Tucked away in the southwestern part of India, Kerala beckons with its lush greenery, picturesque backwaters, and warm hospitality. Our Kerala Tourism website is your digital companion on a journey to uncover the myriad facets of this beautiful state. As you navigate through our pages, prepare to be enchanted by the allure of traditional houseboats gracefully gliding on tranquil waters, the aroma of spices that permeates the air, and the vibrant hues of festivals that echo the cultural tapestry of Kerala.
+<br><br>
+          Dive deeper into the heart of Kerala's charm as you explore the diverse landscapes that define the region. From the misty hills of Munnar to the pristine beaches of Kovalam, each district holds a unique story waiting to be told. Discover the intricate dance of Kathakali, savor the flavors of Malabar cuisine, and witness the timeless rituals along the temples of Thrissur. Our curated content will guide you through the wonders of each district, offering insights into the local customs, hidden gems, and experiences that make Kerala truly extraordinary.
+          <br>
+          <br>
+
+          Embark on this virtual journey with us as we invite you to delve into the rich cultural heritage, breathtaking scenery, and warm hospitality that make Kerala a destination like no other. The magic of Kerala awaits you at every turn. For a more in-depth exploration, venture into our "Exploring Districts of Kerala" section below, where you'll find a detailed guide to the diverse regions that form the heart and soul of this incredible destination. </strong></p>
+       </section>
+<div class="T1 Districts">
+        <h1>DISTRICTS</h1>
+
+        <br>
+        
+        
+
+        <div class="row">
+          <div class="col"><div class="card" style="width: 18rem;">
+            <img src="./PICs/TVM/TVM.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text"><strong><a href="./Trvndrm.html">Thiruvananthapuram</a></strong></p>
+            </div>
+          </div></div>
+          <div class="col"><div class="card" style="width: 18rem;">
+          <img src="./PICs/kollm/kollam-2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text"><strong><a href="../kllm.html">Kollam</a></strong></p>
+          </div>
+        </div></div>
+          <div class="col"><div class="card" style="width: 18rem;">
+            <img src="./PICs/pthnmthtta/Pathanamthitta.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text"><strong><a href="./pthmthtta.html">Pathanamthitta</a></strong></p>
+            </div>
+          </div></div>
+          <div class="col"><div class="card" style="width: 18rem;">
+            <img src="./PICs/Alppy/alappuzha.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text"><strong><a href="alppy.html">Alappuzha</a></strong></p>
+            </div>
+          </div></div>
+
+
+
+
+
+
+
+        </div>
+        <br>
+        <div class="row">
+          <div class="col"><div class="card" style="width: 18rem;">
+            <img src="./PICs/kttym/Kottayam.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text"><strong><a href="kttym.html">Kottayam</a></strong></p>
+            </div>
+          </div></div>
+          <div class="col"><div class="card" style="width: 18rem;">
+          <img src="./PICs/idukki/Idukki.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text"><strong><a href="idkki.html">Idukki</a></strong></p>
+          </div>
+        </div></div>
+          <div class="col"><div class="card" style="width: 18rem;">
+            <img src="./PICs/EKM/EKM.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text"><strong><a href="ekm.html">Ernakulam</a></strong></p>
+            </div>
+          </div></div>
+          <div class="col"><div class="card" style="width: 18rem;">
+            <img src="./PICs/TRSSR/thrissur.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text"><strong><a href="trssr.html">Thrissur</a></strong></p>
+            </div>
+          </div></div>
+
+
+
+
+
+
+
+        </div>
+        <br>
+        <div class="row">
+          <div class="col"><div class="card" style="width: 18rem;">
+            <img src="./PICs/pkd/pkd.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text"><strong><a href="pkd.html">Palakkad</a></strong></p>
+            </div>
+          </div></div>
+          <div class="col"><div class="card" style="width: 18rem;">
+          <img src="./PICs/Mlprm/Malappuram.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text"><strong><a href="mlprm.html">Malappuram</a></strong></p>
+          </div>
+        </div></div>
+          <div class="col"><div class="card" style="width: 18rem;">
+            <img src="./PICs/KZHKD/kzhkd.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text"><strong><a href="kzhkd.html">Kozhikode</a></strong></p>
+            </div>
+          </div></div>
+          <div class="col"><div class="card" style="width: 18rem;">
+            <img src="./PICs/wynd/wayanad.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text"><strong><a href="waynd.html">Wayanad</a></strong></p>
+            </div>
+          </div></div>
+
+
+
+
+
+
+
+        </div>
+        <br>
+        <div class="row">
+          <div class="col"><div class="card" style="width: 18rem;">
+            <img src="./PICs/Kannur/kannur.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text"><strong><a href="kannur.html">Kannur</a></strong></p>
+            </div>
+          </div></div>
+          <div class="col"><div class="card" style="width: 18rem;">
+          <img src="./PICs/ksrgd/kasargod.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text"><strong><a href="ksrgd.html">Kasaragod</a></strong></p>
+          </div>
+        </div></div>
+          
+          <div class="col"></div>
+          <div class="col"></div>
+
+
+
+
+
+
+
+        </div>
+
+       
+      <section id="contact" class="contact pt-5">
+        <div class="container mt-5">
+    
+          <div class="section-title pb-3">
+            <h1 class="heading">CONTACT</h1>
+          </div>
+          <div class="alert alert-danger" id="contactAlert" role="alert" style="display: none;">
+            A simple danger alert—check it out!
+          </div>
+          <div class="col-12">
+            <form id="contactForm" >
+              <div class="row">
+                <div class="form-group col-md-6 mb-3">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="contactName" placeholder="Enter your name">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="contactEmail" placeholder="Enter your email">
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="contactSubject" placeholder="Enter subject" >
+              </div>
+              <div class="form-group mb-3">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" id="contactMessage" placeholder="Message"></textarea>
+              </div>
+    
+              <div class="text-center pt-3 mb-5" ><button class="btn btn-success" type="submit" >Send Message</button></div>
+            </form>
+          </div>
+        </div>
+      </section> 
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+ 
+</body>
+</html>

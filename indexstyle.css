@@ -1,0 +1,145 @@
+body {
+  
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.image-container {
+  
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(184, 219, 209);
+  
+}
+
+.image-container img {
+
+  margin: 100px; /* Adjust the margin as needed */
+  
+}
+
+.T1{
+  background-color: rgb(216, 202, 186);
+  padding: 0px 190px;
+  text-align: justify;
+}
+.card-body{
+  background-color: rgb(219, 217, 214);
+}
+.card-text{
+  color: solid black;
+}
+.T{
+  background-color: rgb(216, 202, 186);
+  padding: 55px 300px;
+  text-align: justify;
+}
+.T2{
+  background-color: rgb(173, 155, 50);
+  padding: 55px 300px;
+  text-align: justify;
+}
+.T3{
+  padding: 55px 300px;
+}
+.carousel{
+  max-width: 1000px;
+  margin: 21px 500px;
+  
+  
+}
+.carousel-caption {
+  display: none;
+}
+
+
+
+    #carouselExampleDark {
+        max-width: 600px; /* Set your desired maximum width */
+        margin: auto; /* Center the carousel */
+        max-width: 600px; /* Set your desired maximum width */
+        margin: auto; /* Center the carousel */
+        border: 2px solid #000000; /* Add a 2px solid border with a color of your choice */
+        border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+        overflow: hidden; /* Optional: Hide the overflowing parts of the image */
+        margin-bottom: 500px;
+    }
+
+    #carouselExampleDark img {
+        max-width: 100%; /* Make images responsive within the carousel */
+        height: auto; /* Maintain the aspect ratio of images */
+    }
+
+    .carousel-caption {
+        background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background to the caption */
+        color: #fff; /* Set text color for the caption */
+        width: fit-content;
+    }
+
+    .highlight {
+        color: #e2e2df; /* Set the color for highlighted text */
+    }
+
+    @media (max-width: 768px) {
+      .T{
+        padding: 10px; /* Adjust padding for smaller screens */
+        margin: auto;
+      }
+
+      .image-container img {
+
+        padding: 10px; /* Adjust padding for smaller screens */
+        margin: auto;
+        margin-top: 50px;
+      align-items: center;
+      }
+.T1 {
+  text-align: center;
+  margin: auto;
+  padding: 50px;
+  align-items: center;
+}
+.T2 {
+  text-align: left;
+  margin: auto;
+  padding: 50px;
+  align-items: center;
+}
+.T3 {
+  text-align: left;
+  margin: auto;
+  padding: 50px;
+  align-items: center;
+}
+.carousel{
+  max-width: 200px;
+}
+.mobile-caption {
+  display: block;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+}
+
+/* Hide desktop captions on small screens */
+.carousel-caption {
+  display: none;
+}
+
+.carousel-caption {
+  display: block;
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background for better readability */
+        color: #fff; /* Text color */
+        padding: 10px;
+        width: 100%;
+}
+      .image-container {
+        padding: 10px; /* Adjust padding for smaller screens */
+        margin: auto;
+      }
+  }
